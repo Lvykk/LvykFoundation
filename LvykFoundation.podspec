@@ -40,6 +40,8 @@ Pod::Spec.new do |s|
   
   s.subspec "Effects" do |ss|
       ss.source_files  = "LvykFoundation/Classes/Effects/**/*"
+      ss.ios.framework = "CoreImage"
+      ss.ios.framework = "Accelerate"
   end
   
   s.subspec "Macro" do |ss|
@@ -53,6 +55,8 @@ Pod::Spec.new do |s|
   s.subspec "NSDecimalNumber" do |ss|
       ss.source_files  = "LvykFoundation/Classes/NSDecimalNumber/**/*"
   end
+  
+  s.ios.framework = "UIKit"
   
   s.dependency "Moya", "~> 15.0.0"
   s.dependency "BigInt", "~> 5.2.0"
