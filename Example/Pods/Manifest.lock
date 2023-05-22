@@ -1,0 +1,70 @@
+PODS:
+  - Alamofire (5.7.1)
+  - BigInt (5.2.0)
+  - Cache (6.0.0)
+  - LvykFoundation (0.1.0):
+    - BigInt (~> 5.2.0)
+    - Cache (~> 6.0.0)
+    - LvykFoundation/Cache (= 0.1.0)
+    - LvykFoundation/Decodable (= 0.1.0)
+    - LvykFoundation/Effects (= 0.1.0)
+    - LvykFoundation/Macro (= 0.1.0)
+    - LvykFoundation/Network (= 0.1.0)
+    - LvykFoundation/NSDecimalNumber (= 0.1.0)
+    - Moya (~> 15.0.0)
+  - LvykFoundation/Cache (0.1.0):
+    - BigInt (~> 5.2.0)
+    - Cache (~> 6.0.0)
+    - Moya (~> 15.0.0)
+  - LvykFoundation/Decodable (0.1.0):
+    - BigInt (~> 5.2.0)
+    - Cache (~> 6.0.0)
+    - Moya (~> 15.0.0)
+  - LvykFoundation/Effects (0.1.0):
+    - BigInt (~> 5.2.0)
+    - Cache (~> 6.0.0)
+    - Moya (~> 15.0.0)
+  - LvykFoundation/Macro (0.1.0):
+    - BigInt (~> 5.2.0)
+    - Cache (~> 6.0.0)
+    - Moya (~> 15.0.0)
+  - LvykFoundation/Network (0.1.0):
+    - BigInt (~> 5.2.0)
+    - Cache (~> 6.0.0)
+    - Moya (~> 15.0.0)
+  - LvykFoundation/NSDecimalNumber (0.1.0):
+    - BigInt (~> 5.2.0)
+    - Cache (~> 6.0.0)
+    - Moya (~> 15.0.0)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+
+DEPENDENCIES:
+  - BigInt
+  - Cache
+  - LvykFoundation (from `../`)
+  - Moya
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - BigInt
+    - Cache
+    - Moya
+
+EXTERNAL SOURCES:
+  LvykFoundation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  BigInt: f668a80089607f521586bbe29513d708491ef2f7
+  Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
+  LvykFoundation: 4ff1b2da063adc78eb3b83a94a62d644993c9812
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+
+PODFILE CHECKSUM: 6a67dbd8857549d52c567beca58cbf626aa1360f
+
+COCOAPODS: 1.12.1

@@ -1,0 +1,60 @@
+{
+  "name": "LvykFoundation",
+  "version": "0.1.0",
+  "summary": "A short description of LvykFoundation.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Lvykk/LvykFoundation",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Lvyk": "lvyk1029@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Lvykk/LvykFoundation.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "LvykFoundation/Classes/**/*",
+  "requires_arc": true,
+  "dependencies": {
+    "Moya": [
+      "~> 15.0.0"
+    ],
+    "BigInt": [
+      "~> 5.2.0"
+    ],
+    "Cache": [
+      "~> 6.0.0"
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "Cache",
+      "source_files": "LvykFoundation/Classes/Cache/**/*"
+    },
+    {
+      "name": "Decodable",
+      "source_files": "LvykFoundation/Classes/Decodable/**/*"
+    },
+    {
+      "name": "Effects",
+      "source_files": "LvykFoundation/Classes/Effects/**/*"
+    },
+    {
+      "name": "Macro",
+      "source_files": "LvykFoundation/Classes/Macro/**/*"
+    },
+    {
+      "name": "Network",
+      "source_files": "LvykFoundation/Classes/Network/**/*"
+    },
+    {
+      "name": "NSDecimalNumber",
+      "source_files": "LvykFoundation/Classes/NSDecimalNumber/**/*"
+    }
+  ]
+}
