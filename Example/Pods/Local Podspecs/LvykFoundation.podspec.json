@@ -1,8 +1,8 @@
 {
   "name": "LvykFoundation",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "summary": "A short description of LvykFoundation.",
-  "description": "TODO: Add long description of the pod here.",
+  "description": "A tool class for secondary packaging of network and cache libraries",
   "homepage": "https://github.com/Lvykk/LvykFoundation",
   "license": {
     "type": "MIT",
@@ -13,12 +13,14 @@
   },
   "source": {
     "git": "https://github.com/Lvykk/LvykFoundation.git",
-    "tag": "0.1.0"
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "11.0"
   },
-  "source_files": "LvykFoundation/Classes/**/*",
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "5.0"
+  },
   "requires_arc": true,
   "dependencies": {
     "Moya": [
@@ -34,27 +36,45 @@
   "subspecs": [
     {
       "name": "Cache",
-      "source_files": "LvykFoundation/Classes/Cache/**/*"
+      "source_files": "LvykFoundation/Classes/Cache/**/*",
+      "pod_target_xcconfig": {
+        "SWIFT_VERSION": "5.0"
+      }
     },
     {
       "name": "Decodable",
-      "source_files": "LvykFoundation/Classes/Decodable/**/*"
+      "source_files": "LvykFoundation/Classes/Decodable/**/*",
+      "pod_target_xcconfig": {
+        "SWIFT_VERSION": "5.0"
+      }
     },
     {
       "name": "Effects",
-      "source_files": "LvykFoundation/Classes/Effects/**/*"
+      "source_files": "LvykFoundation/Classes/Effects/**/*",
+      "pod_target_xcconfig": {
+        "SWIFT_VERSION": "5.0"
+      }
     },
     {
       "name": "Macro",
-      "source_files": "LvykFoundation/Classes/Macro/**/*"
+      "source_files": "LvykFoundation/Classes/Macro/**/*",
+      "pod_target_xcconfig": {
+        "SWIFT_VERSION": "5.0"
+      }
     },
     {
       "name": "Network",
-      "source_files": "LvykFoundation/Classes/Network/**/*"
+      "source_files": "LvykFoundation/Classes/Network/**/*",
+      "pod_target_xcconfig": {
+        "SWIFT_VERSION": "5.0"
+      }
     },
     {
       "name": "NSDecimalNumber",
-      "source_files": "LvykFoundation/Classes/NSDecimalNumber/**/*"
+      "source_files": "LvykFoundation/Classes/NSDecimalNumber/**/*",
+      "pod_target_xcconfig": {
+        "SWIFT_VERSION": "5.0"
+      }
     }
   ]
 }

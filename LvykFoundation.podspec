@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LvykFoundation'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of LvykFoundation.'
 
 # This description is used to generate tags and improve search results.
@@ -17,21 +17,19 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = "A tool class for secondary packaging of network and cache libraries"
 
   s.homepage         = 'https://github.com/Lvykk/LvykFoundation'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Lvyk' => 'lvyk1029@gmail.com' }
   s.source           = { :git => 'https://github.com/Lvykk/LvykFoundation.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '11.0'
-
-  s.source_files = 'LvykFoundation/Classes/**/*'
   
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
+  
+  s.requires_arc = true
+    
   s.subspec "Cache" do |ss|
       ss.source_files  = "LvykFoundation/Classes/Cache/**/*"
   end
@@ -55,8 +53,6 @@ TODO: Add long description of the pod here.
   s.subspec "NSDecimalNumber" do |ss|
       ss.source_files  = "LvykFoundation/Classes/NSDecimalNumber/**/*"
   end
-  
-  s.requires_arc = true
   
   s.dependency "Moya", "~> 15.0.0"
   s.dependency "BigInt", "~> 5.2.0"
