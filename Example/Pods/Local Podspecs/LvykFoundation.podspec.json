@@ -19,9 +19,12 @@
     "ios": "11.0"
   },
   "pod_target_xcconfig": {
-    "SWIFT_VERSION": "5.0"
+    "VALID_ARCHS": "x86_64 armv7 arm64"
   },
   "requires_arc": true,
+  "ios": {
+    "frameworks": "UIKit"
+  },
   "dependencies": {
     "Moya": [
       "~> 15.0.0"
@@ -36,45 +39,30 @@
   "subspecs": [
     {
       "name": "Cache",
-      "source_files": "LvykFoundation/Classes/Cache/**/*",
-      "pod_target_xcconfig": {
-        "SWIFT_VERSION": "5.0"
-      }
+      "source_files": "LvykFoundation/Classes/Cache/**/*"
     },
     {
       "name": "Decodable",
-      "source_files": "LvykFoundation/Classes/Decodable/**/*",
-      "pod_target_xcconfig": {
-        "SWIFT_VERSION": "5.0"
-      }
+      "source_files": "LvykFoundation/Classes/Decodable/**/*"
     },
     {
       "name": "Effects",
       "source_files": "LvykFoundation/Classes/Effects/**/*",
-      "pod_target_xcconfig": {
-        "SWIFT_VERSION": "5.0"
+      "ios": {
+        "frameworks": "Accelerate"
       }
     },
     {
       "name": "Macro",
-      "source_files": "LvykFoundation/Classes/Macro/**/*",
-      "pod_target_xcconfig": {
-        "SWIFT_VERSION": "5.0"
-      }
+      "source_files": "LvykFoundation/Classes/Macro/**/*"
     },
     {
       "name": "Network",
-      "source_files": "LvykFoundation/Classes/Network/**/*",
-      "pod_target_xcconfig": {
-        "SWIFT_VERSION": "5.0"
-      }
+      "source_files": "LvykFoundation/Classes/Network/**/*"
     },
     {
       "name": "NSDecimalNumber",
-      "source_files": "LvykFoundation/Classes/NSDecimalNumber/**/*",
-      "pod_target_xcconfig": {
-        "SWIFT_VERSION": "5.0"
-      }
+      "source_files": "LvykFoundation/Classes/NSDecimalNumber/**/*"
     }
   ]
 }

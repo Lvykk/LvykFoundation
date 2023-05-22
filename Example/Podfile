@@ -1,6 +1,8 @@
-use_frameworks!
+use_modular_headers!
 
 platform :ios, '11.0'
+
+inhibit_all_warnings!
 
 target 'LvykFoundation_Example' do
   pod 'LvykFoundation', :path => '../'
@@ -11,16 +13,18 @@ target 'LvykFoundation_Example' do
 
   target 'LvykFoundation_Tests' do
     inherit! :search_paths
-
-    
+  end
+  
+  pre_install do |installer|
+    Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
   end
   
   post_install do |installer|
-     installer.pods_project.targets.each do |target|
-      target.build_configurations.each do |config|
-       config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
-      end
-     end
+   installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+     config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
     end
+   end
+  end
   
 end

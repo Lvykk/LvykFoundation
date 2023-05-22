@@ -1,4 +1,4 @@
-framework module LvykFoundation {
+module LvykFoundation {
   umbrella header "LvykFoundation-umbrella.h"
 
   export *

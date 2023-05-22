@@ -1,4 +1,4 @@
-framework module Pods_LvykFoundation_Example {
+module Pods_LvykFoundation_Example {
   umbrella header "Pods-LvykFoundation_Example-umbrella.h"
 
   export *

@@ -22,37 +22,43 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/Lvykk/LvykFoundation'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Lvyk' => 'lvyk1029@gmail.com' }
-  s.source           = { :git => 'https://github.com/Lvykk/LvykFoundation.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Lvykk/LvykFoundation.git', :tag => s.version }
 
   s.ios.deployment_target = '11.0'
   
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
+  
+#  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
   
   s.requires_arc = true
     
-  s.subspec "Cache" do |ss|
-      ss.source_files  = "LvykFoundation/Classes/Cache/**/*"
+  s.subspec "Cache" do |cache|
+      cache.source_files  = "LvykFoundation/Classes/Cache/**/*"
   end
   
-  s.subspec "Decodable" do |ss|
-      ss.source_files  = "LvykFoundation/Classes/Decodable/**/*"
+  s.subspec "Decodable" do |decodable|
+      decodable.source_files  = "LvykFoundation/Classes/Decodable/**/*"
   end
   
-  s.subspec "Effects" do |ss|
-      ss.source_files  = "LvykFoundation/Classes/Effects/**/*"
+  s.subspec "Effects" do |effects|
+      effects.source_files  = "LvykFoundation/Classes/Effects/**/*"
+      effects.ios.framework = "CoreImage"
+      effects.ios.framework = "Accelerate"
   end
   
-  s.subspec "Macro" do |ss|
-      ss.source_files  = "LvykFoundation/Classes/Macro/**/*"
+  s.subspec "Macro" do |macro|
+      macro.source_files  = "LvykFoundation/Classes/Macro/**/*"
   end
   
-  s.subspec "Network" do |ss|
-      ss.source_files  = "LvykFoundation/Classes/Network/**/*"
+  s.subspec "Network" do |network|
+      network.source_files  = "LvykFoundation/Classes/Network/**/*"
   end
   
-  s.subspec "NSDecimalNumber" do |ss|
-      ss.source_files  = "LvykFoundation/Classes/NSDecimalNumber/**/*"
+  s.subspec "NSDecimalNumber" do |num|
+      num.source_files  = "LvykFoundation/Classes/NSDecimalNumber/**/*"
   end
+  
+  s.ios.framework = "UIKit"
   
   s.dependency "Moya", "~> 15.0.0"
   s.dependency "BigInt", "~> 5.2.0"
